@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web app libri - firebase: firestore</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1>Web app libri - firebase: firestore</h1>
-    <div class="content">
-      <form id="add-book-form">
-        <input type="text" name="livro" id="livro" />
-        <input type="text" name="autor" id="autor" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web app libri - firebase: firestore</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>Web app libri - firebase: firestore</h1>
+        <div class="content">
+            <form id="add-book-form">
+                <input type="text" name="titulo" id="titulo" />
+                <input type="text" name="autor" id="autor" />
 
-        <button>Cadastrar</button>
-      </form>
-      <ul id="book-list"></ul>
-    </div>
-  </body>
-  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+                <button>Cadastrar</button>
+            </form>
+            <ul id="book-list"></ul>
+        </div>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
-  <script>
-    const firebaseConfig = {};
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: 'AIzaSyBPsR398Aa9WaQt3eN5Iietx7ZWKbTjIdU',
+            authDomain: 'app-libri-gustavo.firebaseapp.com',
+            projectId: 'app-libri-gustavo',
+            storageBucket: 'app-libri-gustavo.appspot.com',
+            messagingSenderId: '867392914188',
+            appId: '1:867392914188:web:c260ab80e5fdcb2864ff29',
+            measurementId: 'G-NGX9N5WM52',
+        }
 
-    firebase.initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig)
 
-    const db = firebase.firestore();
+        const db = firebase.firestore()
 
-    console.log(db);
-  </script>
-  <script src="./app.js"></script>
+        console.log(db)
+    </script>
+    <script src="./app.js"></script>
 </html>
